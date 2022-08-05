@@ -9,14 +9,13 @@ namespace ExplosionAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ReversedController : ControllerBase
+    public class ReverseStringController : ControllerBase
     {
         [HttpGet]
-        public string Backwards(string str = "123678")
+        public string RevString(string str)
         {
             char[] chars = str.ToCharArray();
             Array.Reverse(chars);
-
             return new string(chars);
         }
     }
