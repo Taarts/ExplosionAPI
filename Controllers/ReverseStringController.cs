@@ -11,7 +11,7 @@ namespace ExplosionAPI.Controllers
     [ApiController]
     public class ReverseStringController : ControllerBase
     {
-        [HttpGet]
+        [HttpGet("{str}")]
         public string RevString(string str)
         {
             char[] chars = str.ToCharArray();
